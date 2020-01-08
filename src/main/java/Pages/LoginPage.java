@@ -10,6 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import static java.lang.System.*;
+import static java.lang.Thread.sleep;
+
 public class LoginPage {
 
     private WebDriver driver;
@@ -35,14 +38,13 @@ public class LoginPage {
         }
     }
 
-    public void clickLogBtn() throws InterruptedException {
-        Thread.sleep(3000);
+    public void clickLogBtn() throws Exception{
+        sleep(5000);
         loginBtn.click();
-        System.out.println("click success");
     }
 
 
-    public boolean checkAccount() {
+    public boolean checkAccount()throws Exception {
         try {
             driver.findElement(By.xpath("//div[3]/div/div[1]/button[2]"));
         } catch (NoSuchElementException e) {

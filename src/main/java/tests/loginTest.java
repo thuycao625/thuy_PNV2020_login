@@ -8,6 +8,7 @@ import cucumber.api.java.en.When;
 import MyRunner.*;
 import org.openqa.selenium.support.PageFactory;
 
+import static java.lang.Thread.sleep;
 import static tests.providerTest.getLoginPage;
 
 
@@ -30,15 +31,13 @@ public class loginTest extends TestRunner {
 
 
     @When("^I click Login$")
-    public void i_click_Login() throws Throwable {
+    public void i_click_Login() throws Exception {
         getLoginPage().clickLogBtn();
-        Thread.sleep(3000);
-
-
     }
 
     @Then("^I verify Harry Potter is selected$")
-    public void i_verify_Harry_Potter_is_selected() throws Throwable {
+    public void i_verify_Harry_Potter_is_selected() throws Exception {
+        sleep(5000);
         getLoginPage().checkAccount();
      
     }
