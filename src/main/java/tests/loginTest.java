@@ -8,10 +8,11 @@ import cucumber.api.java.en.When;
 import MyRunner.*;
 import org.openqa.selenium.support.PageFactory;
 
+import static tests.providerTest.getLoginPage;
+
 
 public class loginTest extends TestRunner {
 
-    private static LoginPage loginPage;
 
 
     @Given("Open website (.*)$")
@@ -42,12 +43,7 @@ public class loginTest extends TestRunner {
         throw new PendingException();
     }
 
-    public static LoginPage getLoginPage() {
-        if (loginPage == null) {
-            loginPage = PageFactory.initElements(TestRunner.driver, LoginPage.class);
-        }
-        return loginPage;
-    }
+
 
 
 }
