@@ -33,14 +33,14 @@ public class loginTest extends TestRunner {
     public void i_click_Login() throws Throwable {
         getLoginPage().clickLogBtn();
         Thread.sleep(3000);
-        throw new PendingException();
+
 
     }
 
     @Then("^I verify Harry Potter is selected$")
     public void i_verify_Harry_Potter_is_selected() throws Throwable {
         getLoginPage().checkAccount();
-        throw new PendingException();
+     
     }
 
 
